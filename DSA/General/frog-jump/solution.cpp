@@ -44,21 +44,20 @@ public:
     }
 
     int solve4(vector<int>& heights){
-        // int prev1 = 0;
-        // int prev2 = 0;
-        // int current = 0;
-        // int left = 0;
-        // int right = 0;
-        // for(int i = 1; i < heights.size(); i++){
-        //     left = prev1 + abs(heights[i-1] - heights[i]);
-        //     prev1 = left;
-        //     if(i > 1){
-        //         right = prev2 + abs(heights[i-2] - heights[i]);
-        //         prev2 = right;
-        //     }
-        //     current = min(left, right);
-        // }
-        // return current;
+        int p1 = 0; //(represent i-1)
+        int p2 = 0; // (represent i-2)
+        int right = INT_MAX;
+        int current = 0;
+        for(int i = 1; i < heights.size(); i++){
+            int left = p1 + abs(heights[i] - heights[i-1]);
+            if(i > 1){
+                right = p2 + abs(heights[i] - heights[i-2]);
+            }
+            current = min(left, right);
+            p2 = p1;
+            p1 = current;
+        }
+        return current;
     }
     
     int frogJump(vector<int>& heights) {
@@ -71,6 +70,6 @@ public:
         // return solve2(n-1, heights, dp);
 
         //Method 3: Tabulation
-        return solve3(heights);
+        return solve4(heights);
     }
 };
