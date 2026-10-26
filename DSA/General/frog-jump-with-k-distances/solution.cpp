@@ -25,11 +25,32 @@ public:
         }
         return dp[index];
     }
+
+    int tabulation(vector<int>& heights, int k){
+        int n = heights.size();
+        vector<int> dp(n, -1);
+        dp[0] = 0;
+        for(int index = 1; index < n; index++){
+            int minEnergy = INT_MAX;
+            for(int i = 1; i <= k; i++){
+                if(index - i >= 0){
+                    int energy = dp[index - i] + abs(heights[index] - heights[index - i]);
+                    minEnergy = min(minEnergy, energy);
+                    dp[index] = minEnergy;
+                }
+            }
+        }
+        return dp[n-1];
+    }
+
     int frogJump(vector<int>& heights, int k) {
         int n = heights.size();
         //Method 1: Recursion: TC: O(k^n) and SC: O(n) [recursion stack]
         // return recursion(n-1, heights, k);
-        vector<int> dp(n, -1);
-        return memoization(n-1, dp, heights, k);
+        //Method 2: Memoization: TC: O(nk) and SC: O(n) + O(n) [Recursion stack and Dp array]
+        // vector<int> dp(n, -1);
+        // return memoization(n-1, dp, heights, k);
+        //Method 3: Tabulation: TC: O(nk) and SC: O(n) [Recursion stack]
+        return tabulation(heights, k);
     }
 };
