@@ -24,6 +24,32 @@ public:
         }
         return dp[index][last] = merit;
     }
+    
+    int tabulation(vector<vector<int>>& matrix){
+        //Note: dp[index][last] represent recursion(index, last)
+        int n = matrix.size();
+        vector<vector<int>> dp(n, vector<int>(4, -1));
+        dp[0][0] = max(matrix[0][1], matrix[0][2]); //if last is 0 then choose max btw (0,1) and (0,2)
+        dp[0][1] = max(matrix[0][0], matrix[0][2]); //if last is 1 then choose max btw (0,0) and (0,2)
+        dp[0][2] = max(matrix[0][0], matrix[0][1]); //if last is 2 then choose max btw (0,0) and (0,1)
+        //if last is 3 then choose among (0,0), (0,1) and (0,2)
+        int max1 = max(matrix[0][0], matrix[0][1]);
+        dp[0][3] = max(max1, matrix[0][2]);
+
+        for(int day = 1; day < n; day++){
+            //last can be 0,1,2,3
+            for(int last = 0; last < 4; last++){
+                int merit = 0;
+                for(int task = 0; task < 3; task++){
+                    if(task == last) continue;
+                    int val = matrix[day][task] + dp[day - 1][task];
+                    merit = max(val, merit);
+                }
+                dp[day][last] = merit;
+            }
+        }
+        return dp[n-1][3];
+    }
 
     int ninjaTraining(vector<vector<int>>& matrix) {
         //Method 1: Recursion: TC: O(3^n) and SC: O(n)
@@ -31,9 +57,12 @@ public:
         // return recursion(n-1, 3, matrix);
 
         //Method 2: Memoization: TC: O()
-        int n = matrix.size();
-        //2D dp
-        vector<vector<int>>dp(n, vector<int>(4, -1)); //4 because there are 4 choices 0,1,2,3 where 3 represent None selected
-        return memoization(n-1, 3, dp, matrix);
+        // int n = matrix.size();
+        // //2D dp
+        // vector<vector<int>>dp(n, vector<int>(4, -1)); //4 because there are 4 choices 0,1,2,3 where 3 represent None selected
+        // return memoization(n-1, 3, dp, matrix);
+
+        //Method 3: Tabulation: 
+        return tabulation(matrix);
     }
 };
