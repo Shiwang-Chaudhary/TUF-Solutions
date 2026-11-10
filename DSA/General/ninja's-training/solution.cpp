@@ -53,14 +53,14 @@ public:
 
     int optimized(vector<vector<int>>& matrix){
         int n = matrix.size();
-        vector<int> p(4, -1);        
+        vector<int> prev(4, -1);        
         //p represent the day-1 state 
-        p[0] = max(matrix[0][1], matrix[0][2]); //if last is 0 then choose max btw (0,1) and (0,2)
-        p[1] = max(matrix[0][0], matrix[0][2]); //if last is 1 then choose max btw (0,0) and (0,2)
-        p[2] = max(matrix[0][0], matrix[0][1]); //if last is 2 then choose max btw (0,0) and (0,1)
+        prev[0] = max(matrix[0][1], matrix[0][2]); //if last is 0 then choose max btw (0,1) and (0,2)
+        prev[1] = max(matrix[0][0], matrix[0][2]); //if last is 1 then choose max btw (0,0) and (0,2)
+        prev[2] = max(matrix[0][0], matrix[0][1]); //if last is 2 then choose max btw (0,0) and (0,1)
         //if last is 3 then choose among (0,0), (0,1) and (0,2)
         int max1 = max(matrix[0][0], matrix[0][1]);
-        p[3] = max(max1, matrix[0][2]);
+        prev[3] = max(max1, matrix[0][2]);
         int ans = 0;
         for(int day = 1; day < n; day++){
             vector<int>curr(4, -1);
@@ -68,14 +68,14 @@ public:
                 int merit = 0;
                 for(int task = 0; task < 3; task++){
                     if(task == last) continue;
-                    int val = matrix[day][task] + p[task]; //day-1
+                    int val = matrix[day][task] + prev[task]; //day-1
                     merit = max(merit, val); // means current day
                 }
                 curr[last] = merit;
             }
-            p = curr;
+            prev = curr;
         }
-        return p[3];
+        return prev[3];
     }
 
     int ninjaTraining(vector<vector<int>>& matrix) {
@@ -92,7 +92,7 @@ public:
         //Method 3: Tabulation: TC: O(Nx4x3) and SC: O(4n)
         // return tabulation(matrix);
 
-        //Method 4: Optimized tabulation: TC: O(Nx4x3) and SC: O(1) [O(4) techincally]
+        //Method 4: Optimized tabulation: TC: O(Nx4x3) and SC: O(1) [O(4 + 4) techincally (curr and prev vectors)]
         return optimized(matrix);
     }
 };
