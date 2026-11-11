@@ -6,13 +6,13 @@
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard | Last Synced |
 | :---: | :---: | :---: | :---: | :---: |
-| **9** | 0 | 9 | 0 | `2026-11-11` |
+| **10** | 0 | 10 | 0 | `2026-11-11` |
 
 ---
 
 ## 🗂️ Solved Problems Index
 
-### DSA (9)
+### DSA (10)
 
 | # | Title | Solution(s) | Difficulty | Topic | Last Synced |
 | :---: | :--- | :---: | :---: | :--- | :---: |
@@ -25,6 +25,7 @@
 | 0007 | [1020. Merge Sorting](./DSA/Arrays/merge-sorting) | [CPP](./DSA/Arrays/merge-sorting/solution.cpp) | ⚪ Unspecified | `Arrays` | `2026-10-05` |
 | 0008 | [125. Ninja's training](./DSA/General/ninja's-training) | [CPP](./DSA/General/ninja's-training/solution.cpp) | ⚪ Unspecified | `General` | `2026-11-10` |
 | 0009 | [1024. Quick Sorting](./DSA/Arrays/quick-sorting) | [CPP](./DSA/Arrays/quick-sorting/solution.cpp) | ⚪ Unspecified | `Arrays` | `2026-10-01` |
+| 0010 | [257. Unique paths II](./DSA/General/unique-paths-ii) | [CPP](./DSA/General/unique-paths-ii/solution.cpp) | ⚪ Unspecified | `General` | `2026-11-11` |
 
 ---
 
