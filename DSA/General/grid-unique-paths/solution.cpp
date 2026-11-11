@@ -40,6 +40,26 @@ public:
         return dp[row-1][col-1];
     }
 
+    int optimization(int row, int col){
+        vector<int> prev(col, 0); //for getting previous row, same as dp[i-1][j]
+        for(int i = 0; i < row; i++){
+            vector<int> curr(col, 0); //for current row values, same as dp[i][j-1]
+            for(int j = 0; j < col; j++){
+                if(i == 0 && j == 0) {
+                    curr[j] = 1;
+                    continue;
+                }
+                int left = 0;
+                int top = 0;
+                if(j > 0) left =  curr[j-1]; // means dp[i][j-1]
+                if(i > 0) top = prev[j]; // means dp[i][j-1]
+                curr[j] = left + top; // same as dp[i][j] = left + top
+            }
+            prev = curr;
+        }
+        return prev[col-1];
+    }
+
     int uniquePaths(int m, int n) {
         //Method 1: Recursion: TC: O(2^(m+n)) and SC: O(m+n)
         // return recursion(m-1, n-1);
@@ -50,6 +70,9 @@ public:
         // return memoization(m-1, n-1, dp);
 
         //Method 3: Tabulation: TC: O(m x n) and SC: O(mxn)
-        return tabulation(m, n);
+        // return tabulation(m, n);
+
+        //Method 4: Space optimization: TC: O(m x n) and SC: O(n)
+        return optimization(m, n);
     }
 };
