@@ -6,13 +6,13 @@
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard | Last Synced |
 | :---: | :---: | :---: | :---: | :---: |
-| **12** | 0 | 12 | 0 | `2026-11-14` |
+| **13** | 0 | 13 | 0 | `2026-11-15` |
 
 ---
 
 ## 🗂️ Solved Problems Index
 
-### DSA (12)
+### DSA (13)
 
 | # | Title | Solution(s) | Difficulty | Topic | Last Synced |
 | :---: | :--- | :---: | :---: | :--- | :---: |
@@ -27,7 +27,8 @@
 | 0009 | [286. Minimum Falling Path Sum](./DSA/Trees/minimum-falling-path-sum) | [CPP](./DSA/Trees/minimum-falling-path-sum/solution.cpp) | ⚪ Unspecified | `Trees` | `2026-11-12` |
 | 0010 | [125. Ninja's training](./DSA/General/ninja's-training) | [CPP](./DSA/General/ninja's-training/solution.cpp) | ⚪ Unspecified | `General` | `2026-11-10` |
 | 0011 | [1024. Quick Sorting](./DSA/Arrays/quick-sorting) | [CPP](./DSA/Arrays/quick-sorting/solution.cpp) | ⚪ Unspecified | `Arrays` | `2026-10-01` |
-| 0012 | [257. Unique paths II](./DSA/General/unique-paths-ii) | [CPP](./DSA/General/unique-paths-ii/solution.cpp) | ⚪ Unspecified | `General` | `2026-11-11` |
+| 0012 | [84. Subset sum equals to target](./DSA/Recursion/subset-sum-equals-to-target) | [CPP](./DSA/Recursion/subset-sum-equals-to-target/solution.cpp) | ⚪ Unspecified | `Recursion` | `2026-11-15` |
+| 0013 | [257. Unique paths II](./DSA/General/unique-paths-ii) | [CPP](./DSA/General/unique-paths-ii/solution.cpp) | ⚪ Unspecified | `General` | `2026-11-11` |
 
 ---
 
