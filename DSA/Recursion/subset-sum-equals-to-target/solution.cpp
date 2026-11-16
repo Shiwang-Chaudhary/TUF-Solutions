@@ -54,11 +54,11 @@ public:
     bool optimization(vector<int>&arr, int target){
         int n = arr.size();
         vector<int> prev(target + 1, 0); // initially false
-        prev[0] = 1;
+        prev[0] = 1; //dp[i][0] must be true;
         if(arr[0] <= target) prev[arr[0]] = 1;
         for(int i = 1; i < n; i++){
-            vector<int> curr(target + 1, 0);
-            curr[0] = 1;
+            vector<int> curr(target + 1, 0); // initially false
+            curr[0] = 1; //dp[i][0] must be true;
             for(int j = 1; j <= target; j++){
                 bool picked = false;
                 if(j-arr[i] >= 0) picked = prev[j-arr[i]];
