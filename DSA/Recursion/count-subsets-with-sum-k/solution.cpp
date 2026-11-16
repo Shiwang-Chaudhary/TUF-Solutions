@@ -1,7 +1,7 @@
 class Solution{
 	public:
 
-    //it represent "Can we return target sum from the subset of arr from 0th to 'index' index?"
+    //it represent number of subsets whose sum are equal to target from 0th to ith index
     int recursion(int index, int target, vector<int>&arr){
         if(target == 0) return true;
         if(index == 0) return arr[0] == target;
@@ -18,7 +18,7 @@ class Solution{
         if(target == 0) return true;
         if(index == 0) return arr[0] == target;
 
-        //dp[index][target] represent "Can we form sum t using elements from index 0 to i?"
+        //dp[index][target] represent number of subsets whose sum are equal to target from 0th to ith index
         if(dp[index][target] != -1) return dp[index][target];
         int notpicked = memoization(index - 1, target, arr, dp);        
         int picked = false;
