@@ -75,13 +75,13 @@ public:
 
         //Method 2: Memoization:
         //Note: 1 means true, 0 means false, -1 means unvisited
-        vector<vector<int>>dp(n, vector<int>(target + 1, -1));
-        return memoization(n - 1, target, arr, dp);
+        // vector<vector<int>>dp(n, vector<int>(target + 1, -1));
+        // return memoization(n - 1, target, arr, dp);
 
         //Method 3: tabulation
         // return tabulation(target, arr);
 
         //Method 4: Space optimization: 
-        // return optimization(arr, target);
+        return optimization(arr, target);
     }   
 };
