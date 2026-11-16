@@ -40,10 +40,10 @@ class Solution{
         //two states(index, target) so two loops
         for(int i = 1; i < n; i++){ //we already took care of index = 0 cases in base case
             for(int j = 1; j <= target; j++){ // we already considered what happens if target = 0 in base case
-                bool picked = false;
+                int picked = false;
                 if(j - arr[i] >= 0) picked = dp[i-1][j - arr[i]];
-                bool notpicked = dp[i-1][j];
-                dp[i][j] = picked + notpicked;
+                int notpicked = dp[i-1][j];
+                dp[i][j] = (picked + notpicked)% 1000000007;
             }
         }
         return dp[n-1][target];
@@ -75,11 +75,11 @@ class Solution{
 
         //Method 2: Memoization:
         //Note: 1 means true, 0 means false, -1 means unvisited
-        vector<vector<int>>dp(n, vector<int>(target + 1, -1));
-        return memoization(n - 1, target, arr, dp);
+        // vector<vector<int>>dp(n, vector<int>(target + 1, -1));
+        // return memoization(n - 1, target, arr, dp);
 
         //Method 3: tabulation
-        // return tabulation(target, arr);
+        return tabulation(target, arr);
 
         //Method 4: Space optimization: 
         // return optimization(arr, target);
