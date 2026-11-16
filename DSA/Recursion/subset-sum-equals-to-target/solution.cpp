@@ -33,7 +33,7 @@ public:
     bool tabulation(int target, vector<int>&arr){
         int n = arr.size();
         //we only need true and false here, not true, false, unvisited
-        vector<vector<int>>dp(n, vector<int>(target + 1, 0));
+        vector<vector<int>>dp(n, vector<int>(target + 1, 0)); // initially false;
         //base cases:
         for(int i = 0; i < n; i++){
             dp[i][0] = 1; //because in recursion, if(target == 0) then return true;[index can be anything within range]
@@ -51,6 +51,25 @@ public:
         return dp[n-1][target];
     }
 
+    bool optimization(vector<int>&arr, int target){
+        int n = arr.size();
+        vector<int> prev(target + 1, 0); // initially false
+        prev[0] = 1;
+        if(arr[0] <= target) prev[arr[0]] = 1;
+        for(int i = 1; i < n; i++){
+            vector<int> curr(target + 1, 0);
+            curr[0] = 1;
+            for(int j = 1; j <= target; j++){
+                bool picked = false;
+                if(j-arr[i] >= 0) picked = prev[j-arr[i]];
+                bool notpicked = prev[j];
+                curr[j] = picked || notpicked;
+            }
+            prev = curr;
+        }
+        return prev[target];
+    }
+
     bool isSubsetSum(vector<int>&arr, int target){
         int n = arr.size();
         //Method 1: Recursion: TC: O(2^n) and SC: O(n)[recursion stack]
@@ -62,6 +81,9 @@ public:
         // return memoization(n - 1, target, arr, dp);
 
         //Method 3: tabulation
-        return tabulation(target, arr);
+        // return tabulation(target, arr);
+
+        //Method 4: Space optimization: 
+        return optimization(arr, target);
     }   
 };
