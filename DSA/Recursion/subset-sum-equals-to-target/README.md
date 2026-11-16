@@ -1,4 +1,4 @@
-# [84. Subset sum equals to target](https://takeuforward.org/practice/dsa/subset-sum-equals-to-target?sidebar=0)
+# [84. Subset sum equals to target](https://takeuforward.org/practice/dsa/subset-sum-equals-to-target?sidebar=0&ai=true)
 
 ![Difficulty: Unspecified](https://img.shields.io/badge/Difficulty-Unspecified-6b7280?style=for-the-badge)
 

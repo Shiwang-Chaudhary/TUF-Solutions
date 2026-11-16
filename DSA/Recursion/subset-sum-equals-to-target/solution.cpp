@@ -1,6 +1,7 @@
 class Solution{   
 public:
 
+    //it represent "Can we return target sum from the subset of arr from 0th to 'index' index?"
     bool recursion(int index, int target, vector<int>&arr){
         if(target == 0) return true;
         if(index < 0) return false;
@@ -21,12 +22,33 @@ public:
         if(target == 0) return true;
         if(target < 0) return false;
         if(index < 0) return false;
+        //dp[index][target] represent "Can we form sum t using elements from index 0 to i?"
         if(dp[index][target] != -1) return dp[index][target];
 
         bool picked = memoization(index - 1, target - arr[index], arr, dp);        
         bool notpicked = memoization(index - 1, target, arr, dp);        
         return dp[index][target] = picked || notpicked;
+    }
 
+    bool tabulation(int target, vector<int>&arr){
+        int n = arr.size();
+        //we only need true and false here, not true, false, unvisited
+        vector<vector<int>>dp(n, vector<int>(target + 1, 0));
+        //base cases:
+        for(int i = 0; i < n; i++){
+            dp[i][0] = 1; //because in recursion, if(target == 0) then return true;[index can be anything within range]
+        }
+        if(arr[0] <= target) dp[0][arr[0]] = 1;
+        //two states(index, target) so two loops
+        for(int i = 1; i < n; i++){ //we already took care of index = 0 cases in base case
+            for(int j = 1; j <= target; j++){ // we already considered what happens if target = 0 in base case
+                bool picked = false;
+                if(j - arr[i] >= 0) picked = dp[i-1][j - arr[i]];
+                bool notpicked = dp[i-1][j];
+                dp[i][j] = picked || notpicked;
+            }
+        }
+        return dp[n-1][target];
     }
 
     bool isSubsetSum(vector<int>&arr, int target){
@@ -35,7 +57,11 @@ public:
         // return recursion(n - 1, target, arr);
 
         //Method 2: Memoization:
-        vector<vector<int>>dp(n, vector<int>(target + 1, -1));
-        return memoization(n - 1, target, arr, dp);
+        //Note: 1 means true, 0 means false, -1 means unvisited
+        // vector<vector<int>>dp(n, vector<int>(target + 1, -1));
+        // return memoization(n - 1, target, arr, dp);
+
+        //Method 3: tabulation
+        return tabulation(target, arr);
     }   
 };
