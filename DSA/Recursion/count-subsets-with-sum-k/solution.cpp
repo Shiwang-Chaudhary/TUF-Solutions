@@ -58,10 +58,10 @@ class Solution{
             vector<int> curr(target + 1, 0); // initially false
             curr[0] = 1; //dp[i][0] must be true;
             for(int j = 1; j <= target; j++){
-                bool picked = false;
+                int picked = false;
                 if(j-arr[i] >= 0) picked = prev[j-arr[i]];
-                bool notpicked = prev[j];
-                curr[j] = picked + notpicked;
+                int notpicked = prev[j];
+                curr[j] = (picked + notpicked)% 1000000007;
             }
             prev = curr;
         }
