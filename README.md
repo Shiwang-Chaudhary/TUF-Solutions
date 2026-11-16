@@ -6,13 +6,13 @@
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard | Last Synced |
 | :---: | :---: | :---: | :---: | :---: |
-| **13** | 0 | 13 | 0 | `2026-11-16` |
+| **14** | 0 | 14 | 0 | `2026-11-16` |
 
 ---
 
 ## 🗂️ Solved Problems Index
 
-### DSA (13)
+### DSA (14)
 
 | # | Title | Solution(s) | Difficulty | Topic | Last Synced |
 | :---: | :--- | :---: | :---: | :--- | :---: |
@@ -26,9 +26,10 @@
 | 0008 | [1020. Merge Sorting](./DSA/Arrays/merge-sorting) | [CPP](./DSA/Arrays/merge-sorting/solution.cpp) | ⚪ Unspecified | `Arrays` | `2026-10-05` |
 | 0009 | [286. Minimum Falling Path Sum](./DSA/Trees/minimum-falling-path-sum) | [CPP](./DSA/Trees/minimum-falling-path-sum/solution.cpp) | ⚪ Unspecified | `Trees` | `2026-11-12` |
 | 0010 | [125. Ninja's training](./DSA/General/ninja's-training) | [CPP](./DSA/General/ninja's-training/solution.cpp) | ⚪ Unspecified | `General` | `2026-11-10` |
-| 0011 | [1024. Quick Sorting](./DSA/Arrays/quick-sorting) | [CPP](./DSA/Arrays/quick-sorting/solution.cpp) | ⚪ Unspecified | `Arrays` | `2026-10-01` |
-| 0012 | [84. Subset sum equals to target](./DSA/Recursion/subset-sum-equals-to-target) | [CPP](./DSA/Recursion/subset-sum-equals-to-target/solution.cpp) | ⚪ Unspecified | `Recursion` | `2026-11-16` |
-| 0013 | [257. Unique paths II](./DSA/General/unique-paths-ii) | [CPP](./DSA/General/unique-paths-ii/solution.cpp) | ⚪ Unspecified | `General` | `2026-11-11` |
+| 0011 | [86. Partition equal subset sum](./DSA/Recursion/partition-equal-subset-sum) | [Solution-1](./DSA/Recursion/partition-equal-subset-sum/Solution-1.cpp) | ⚪ Unspecified | `Recursion` | `2026-11-16` |
+| 0012 | [1024. Quick Sorting](./DSA/Arrays/quick-sorting) | [CPP](./DSA/Arrays/quick-sorting/solution.cpp) | ⚪ Unspecified | `Arrays` | `2026-10-01` |
+| 0013 | [84. Subset sum equals to target](./DSA/Recursion/subset-sum-equals-to-target) | [CPP](./DSA/Recursion/subset-sum-equals-to-target/solution.cpp) | ⚪ Unspecified | `Recursion` | `2026-11-16` |
+| 0014 | [257. Unique paths II](./DSA/General/unique-paths-ii) | [CPP](./DSA/General/unique-paths-ii/solution.cpp) | ⚪ Unspecified | `General` | `2026-11-11` |
 
 ---
 
