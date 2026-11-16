@@ -4,29 +4,27 @@ public:
     //it represent "Can we return target sum from the subset of arr from 0th to 'index' index?"
     bool recursion(int index, int target, vector<int>&arr){
         if(target == 0) return true;
-        if(index < 0) return false;
+        if(index == 0) return arr[0] == target;
         
-        // bool picked = recursion(index - 1, target - arr[index], arr);
-        // if(picked == true) return true;
-        // bool notpicked = recursion(index - 1, target, arr);
-        // if(notpicked == true) return true;
-        // return false;
-
-        // or
-        bool picked = recursion(index - 1, target - arr[index], arr);        
         bool notpicked = recursion(index - 1, target, arr);        
+        bool picked = false;
+        if(target - arr[index] >= 0){
+            picked = recursion(index - 1, target - arr[index], arr);        
+        }
         return picked || notpicked;
     }
 
     bool memoization(int index, int target, vector<int>&arr, vector<vector<int>>& dp){
         if(target == 0) return true;
-        if(target < 0) return false;
-        if(index < 0) return false;
+        if(index == 0) return arr[0] == target;
+
         //dp[index][target] represent "Can we form sum t using elements from index 0 to i?"
         if(dp[index][target] != -1) return dp[index][target];
-
-        bool picked = memoization(index - 1, target - arr[index], arr, dp);        
         bool notpicked = memoization(index - 1, target, arr, dp);        
+        bool picked = false;
+        if(target - arr[index] >= 0){
+            picked = memoization(index - 1, target - arr[index], arr, dp);        
+        }
         return dp[index][target] = picked || notpicked;
     }
 
@@ -77,13 +75,13 @@ public:
 
         //Method 2: Memoization:
         //Note: 1 means true, 0 means false, -1 means unvisited
-        // vector<vector<int>>dp(n, vector<int>(target + 1, -1));
-        // return memoization(n - 1, target, arr, dp);
+        vector<vector<int>>dp(n, vector<int>(target + 1, -1));
+        return memoization(n - 1, target, arr, dp);
 
         //Method 3: tabulation
         // return tabulation(target, arr);
 
         //Method 4: Space optimization: 
-        return optimization(arr, target);
+        // return optimization(arr, target);
     }   
 };

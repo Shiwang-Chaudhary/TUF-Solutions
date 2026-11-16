@@ -24,6 +24,10 @@ Given an array arr of n integers and an integer target, determine if there is a 
 
 **Explanation:** There is no subset with sum 6.
 
+### Example 3:
+
+<h3 class="ProblemPanel-module__qBixIa__sectionTitle mb-0!">Example 3:</h3>
+
 Still unsure what the problem is asking ?
 
 Let’s go through a few more examples, step by step, to make it clearer.
