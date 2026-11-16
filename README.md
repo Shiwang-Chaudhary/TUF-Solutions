@@ -6,30 +6,31 @@
 
 | Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard | Last Synced |
 | :---: | :---: | :---: | :---: | :---: |
-| **14** | 0 | 14 | 0 | `2026-11-16` |
+| **15** | 0 | 15 | 0 | `2026-11-16` |
 
 ---
 
 ## 🗂️ Solved Problems Index
 
-### DSA (14)
+### DSA (15)
 
 | # | Title | Solution(s) | Difficulty | Topic | Last Synced |
 | :---: | :--- | :---: | :---: | :--- | :---: |
 | 0001 | [7. Climbing stairs](./DSA/General/climbing-stairs) | [CPP](./DSA/General/climbing-stairs/solution.cpp) | ⚪ Unspecified | `General` | `2026-10-21` |
 | 0002 | [Count Square Submatrices with All Ones](./DSA/General/count-square-submatrices-with-all-one) | [CPP](./DSA/General/count-square-submatrices-with-all-one/solution.cpp) | ⚪ Unspecified | `General` | `2026-11-14` |
-| 0003 | [321. Frog Jump](./DSA/General/frog-jump) | [CPP](./DSA/General/frog-jump/solution.cpp) | ⚪ Unspecified | `General` | `2026-10-24` |
-| 0004 | [714. Frog jump with K distances](./DSA/General/frog-jump-with-k-distances) | [CPP](./DSA/General/frog-jump-with-k-distances/solution.cpp) | ⚪ Unspecified | `General` | `2026-10-26` |
-| 0005 | [17. Grid unique paths](./DSA/General/grid-unique-paths) | [CPP](./DSA/General/grid-unique-paths/solution.cpp) | ⚪ Unspecified | `General` | `2026-11-11` |
-| 0006 | [99. House robber](./DSA/General/house-robber) | [CPP](./DSA/General/house-robber/solution.cpp) | ⚪ Unspecified | `General` | `2026-11-04` |
-| 0007 | [114. Maximum sum of non adjacent elements](./DSA/General/maximum-sum-of-non-adjacent-elements) | [CPP](./DSA/General/maximum-sum-of-non-adjacent-elements/solution.cpp) | ⚪ Unspecified | `General` | `2026-10-28` |
-| 0008 | [1020. Merge Sorting](./DSA/Arrays/merge-sorting) | [CPP](./DSA/Arrays/merge-sorting/solution.cpp) | ⚪ Unspecified | `Arrays` | `2026-10-05` |
-| 0009 | [286. Minimum Falling Path Sum](./DSA/Trees/minimum-falling-path-sum) | [CPP](./DSA/Trees/minimum-falling-path-sum/solution.cpp) | ⚪ Unspecified | `Trees` | `2026-11-12` |
-| 0010 | [125. Ninja's training](./DSA/General/ninja's-training) | [CPP](./DSA/General/ninja's-training/solution.cpp) | ⚪ Unspecified | `General` | `2026-11-10` |
-| 0011 | [86. Partition equal subset sum](./DSA/Recursion/partition-equal-subset-sum) | [Solution-1](./DSA/Recursion/partition-equal-subset-sum/Solution-1.cpp) | ⚪ Unspecified | `Recursion` | `2026-11-16` |
-| 0012 | [1024. Quick Sorting](./DSA/Arrays/quick-sorting) | [CPP](./DSA/Arrays/quick-sorting/solution.cpp) | ⚪ Unspecified | `Arrays` | `2026-10-01` |
-| 0013 | [84. Subset sum equals to target](./DSA/Recursion/subset-sum-equals-to-target) | [CPP](./DSA/Recursion/subset-sum-equals-to-target/solution.cpp) | ⚪ Unspecified | `Recursion` | `2026-11-16` |
-| 0014 | [257. Unique paths II](./DSA/General/unique-paths-ii) | [CPP](./DSA/General/unique-paths-ii/solution.cpp) | ⚪ Unspecified | `General` | `2026-11-11` |
+| 0003 | [731. Count subsets with sum K](./DSA/Recursion/count-subsets-with-sum-k) | [CPP](./DSA/Recursion/count-subsets-with-sum-k/solution.cpp) | ⚪ Unspecified | `Recursion` | `2026-11-16` |
+| 0004 | [321. Frog Jump](./DSA/General/frog-jump) | [CPP](./DSA/General/frog-jump/solution.cpp) | ⚪ Unspecified | `General` | `2026-10-24` |
+| 0005 | [714. Frog jump with K distances](./DSA/General/frog-jump-with-k-distances) | [CPP](./DSA/General/frog-jump-with-k-distances/solution.cpp) | ⚪ Unspecified | `General` | `2026-10-26` |
+| 0006 | [17. Grid unique paths](./DSA/General/grid-unique-paths) | [CPP](./DSA/General/grid-unique-paths/solution.cpp) | ⚪ Unspecified | `General` | `2026-11-11` |
+| 0007 | [99. House robber](./DSA/General/house-robber) | [CPP](./DSA/General/house-robber/solution.cpp) | ⚪ Unspecified | `General` | `2026-11-04` |
+| 0008 | [114. Maximum sum of non adjacent elements](./DSA/General/maximum-sum-of-non-adjacent-elements) | [CPP](./DSA/General/maximum-sum-of-non-adjacent-elements/solution.cpp) | ⚪ Unspecified | `General` | `2026-10-28` |
+| 0009 | [1020. Merge Sorting](./DSA/Arrays/merge-sorting) | [CPP](./DSA/Arrays/merge-sorting/solution.cpp) | ⚪ Unspecified | `Arrays` | `2026-10-05` |
+| 0010 | [286. Minimum Falling Path Sum](./DSA/Trees/minimum-falling-path-sum) | [CPP](./DSA/Trees/minimum-falling-path-sum/solution.cpp) | ⚪ Unspecified | `Trees` | `2026-11-12` |
+| 0011 | [125. Ninja's training](./DSA/General/ninja's-training) | [CPP](./DSA/General/ninja's-training/solution.cpp) | ⚪ Unspecified | `General` | `2026-11-10` |
+| 0012 | [86. Partition equal subset sum](./DSA/Recursion/partition-equal-subset-sum) | [Solution-1](./DSA/Recursion/partition-equal-subset-sum/Solution-1.cpp) | ⚪ Unspecified | `Recursion` | `2026-11-16` |
+| 0013 | [1024. Quick Sorting](./DSA/Arrays/quick-sorting) | [CPP](./DSA/Arrays/quick-sorting/solution.cpp) | ⚪ Unspecified | `Arrays` | `2026-10-01` |
+| 0014 | [84. Subset sum equals to target](./DSA/Recursion/subset-sum-equals-to-target) | [CPP](./DSA/Recursion/subset-sum-equals-to-target/solution.cpp) | ⚪ Unspecified | `Recursion` | `2026-11-16` |
+| 0015 | [257. Unique paths II](./DSA/General/unique-paths-ii) | [CPP](./DSA/General/unique-paths-ii/solution.cpp) | ⚪ Unspecified | `General` | `2026-11-11` |
 
 ---
 
